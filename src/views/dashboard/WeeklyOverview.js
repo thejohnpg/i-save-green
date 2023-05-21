@@ -9,10 +9,11 @@ import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 
 // ** Icons Imports
-import DotsVertical from 'mdi-material-ui/DotsVertical'
+import CheckBold from 'mdi-material-ui/CheckBold'
 
 // ** Custom Components Imports
 import ReactApexcharts from 'src/@core/components/react-apexcharts'
+
 
 const WeeklyOverview = () => {
   // ** Hook
@@ -21,7 +22,7 @@ const WeeklyOverview = () => {
   const options = {
     chart: {
       parentHeightOffset: 0,
-      toolbar: { show: false }
+      toolbar: { show: true }
     },
     plotOptions: {
       bar: {
@@ -48,12 +49,12 @@ const WeeklyOverview = () => {
     },
     dataLabels: { enabled: false },
     colors: [
-      theme.palette.background.default,
-      theme.palette.background.default,
-      theme.palette.background.default,
-      theme.palette.primary.main,
-      theme.palette.background.default,
-      theme.palette.background.default
+      "#BAEDBD",
+      "#C6C7F8",
+      "#1C1C1C",
+      "#B1E3FF",
+      "#95A4FC",
+      "#A1E3CB"
     ],
     states: {
       hover: {
@@ -64,11 +65,11 @@ const WeeklyOverview = () => {
       }
     },
     xaxis: {
-      categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      categories: ['ID01001', 'ID01002', 'ID01003', 'ID01004', 'ID01005', 'ID01006', 'ID01007'],
       tickPlacement: 'on',
       labels: { show: false },
-      axisTicks: { show: false },
-      axisBorder: { show: false }
+      axisTicks: { show: true },
+      axisBorder: { show: true }
     },
     yaxis: {
       show: true,
@@ -83,27 +84,25 @@ const WeeklyOverview = () => {
   return (
     <Card>
       <CardHeader
-        title='Weekly Overview'
+        title='H2V Emitido'
         titleTypographyProps={{
           sx: { lineHeight: '2rem !important', letterSpacing: '0.15px !important' }
         }}
         action={
           <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: 'text.secondary' }}>
-            <DotsVertical />
+            {/* <DotsVertical /> */}
           </IconButton>
         }
       />
       <CardContent sx={{ '& .apexcharts-xcrosshairs.apexcharts-active': { opacity: 0 } }}>
-        <ReactApexcharts type='bar' height={205} options={options} series={[{ data: [37, 57, 45, 75, 57, 40, 65] }]} />
-        <Box sx={{ mb: 7, display: 'flex', alignItems: 'center' }}>
-          <Typography variant='h5' sx={{ mr: 4 }}>
-            45%
+        <ReactApexcharts type='bar' height={205} options={options} series={[{ data: [1350, 850, 3450, 2850, 4000, 2000, 1000] }]} />
+        <Box sx={{ mb: 8, display: 'flex', alignItems: 'center' }}>
+          <Typography variant='h5' sx={{ mr: 4 }} style={{ display: 'flex' }}>
+            45% 
+            <CheckBold /> 
           </Typography>
-          <Typography variant='body2'>Your sales performance is 45% 😎 better compared to last month</Typography>
+          <Typography variant='body2' class={{ display: 'flex' }}>Sua performance está 45%</Typography>
         </Box>
-        <Button fullWidth variant='contained'>
-          Details
-        </Button>
       </CardContent>
     </Card>
   )

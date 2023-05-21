@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography'
 import TableContainer from '@mui/material/TableContainer'
 import Rating from '@mui/material/Rating'
 
+
 const rows = [
   {
     nome: 'Igustavo',
@@ -19,7 +20,7 @@ const rows = [
     origem: 'Bahia',
     destino: 'São Paulo',
     qualidade: '',
-    stars: '4.5',
+    stars: 4.5,
     status: 'professional',
     statusLegend: 'Muito Bom'
   },
@@ -30,7 +31,7 @@ const rows = [
     origem: 'São Paulo',
     destino: 'São Paulo',
     qualidade: '',
-    stars: '5',
+    stars: 5,
     status: 'professional',
     statusLegend: 'Excelente'
   },
@@ -41,7 +42,7 @@ const rows = [
     origem: 'São Paulo',
     destino: 'São Paulo',
     qualidade: '',
-    stars: '5',
+    stars: 5,
     status: 'professional',
     statusLegend: 'Excelente'
   },
@@ -52,7 +53,7 @@ const rows = [
     origem: 'São Paulo',
     destino: 'Rio de Janeiro',
     qualidade: '',
-    stars: '4.5',
+    stars: 4.5,
     status: 'professional',
     statusLegend: 'Muito Bom'
   }
