@@ -14,86 +14,57 @@ import CardStatisticsVerticalComponent from 'src/@core/components/card-statistic
 import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 
 // ** Demo Components Imports
-import Table from 'src/views/dashboard/Table'
-import Trophy from 'src/views/dashboard/Trophy'
 import TotalEarning from 'src/views/dashboard/TotalEarning'
-import StatisticsCard from 'src/views/dashboard/StatisticsCard'
 import WeeklyOverview from 'src/views/dashboard/WeeklyOverview'
+import Doughnuth from 'src/views/dashboard/Doughnuth'
 import DepositWithdraw from 'src/views/dashboard/DepositWithdraw'
 import SalesByCountries from 'src/views/dashboard/SalesByCountries'
+import { useEffect } from 'react'
+import { Chart } from 'chart.js/auto'
 
 const Dashboard = () => {
+  useEffect(() => {
+    let chartStatus = Chart.getChart('myChart') // <canvas> id
+    if (chartStatus != undefined) {
+      chartStatus.destroy()
+    }
+    var ctx = document.getElementById('myChart').getContext('2d')
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['ID01001', 'ID01002', 'ID01003', 'ID01004', 'ID01004', 'ID01005', 'ID01001'],
+        datasets: [
+          {
+            data: [66, 144, 146, 116, 107, 131, 43],
+            label: 'H2V (KM)',
+            borderColor: 'rgb(109, 253, 181)',
+            backgroundColor: 'rgb(109, 253, 181,0.5)',
+            borderWidth: 2
+          }
+        ]
+      }
+    })
+  }, [])
+
   return (
     <ApexChartWrapper>
-      <Grid container spacing={6}>
-        <Grid item xs={12} md={4}>
-          {/* <Trophy /> */}
-        </Grid>
-        <Grid item xs={12} md={8}>
-          {/* <StatisticsCard /> */}
+      <Grid container spacing={12}>
+        <Grid item xs={12} lg={4}>
+          <Doughnuth />
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <WeeklyOverview />
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <TotalEarning />
-        </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <Grid container spacing={6}>
-            <Grid item xs={6}>
-              <CardStatisticsVerticalComponent
-                stats='$25.6k'
-                icon={<Poll />}
-                color='success'
-                trendNumber='+42%'
-                title='Total Profit'
-                subtitle='Weekly Profit'
-              />
-            </Grid>
-            <Grid item xs={6}>
-              <CardStatisticsVerticalComponent
-                stats='$78'
-                title='Refunds'
-                trend='negative'
-                color='secondary'
-                trendNumber='-15%'
-                subtitle='Past Month'
-                icon={<CurrencyUsd />}
-              />
-            </Grid>
-            <Grid item xs={6}>
-              <CardStatisticsVerticalComponent
-                stats='862'
-                trend='negative'
-                trendNumber='-18%'
-                title='New Project'
-                subtitle='Yearly Project'
-                icon={<BriefcaseVariantOutline />}
-              />
-            </Grid>
-            <Grid item xs={6}>
-              <CardStatisticsVerticalComponent
-                stats='15'
-                color='warning'
-                trend='negative'
-                trendNumber='-18%'
-                subtitle='Last Week'
-                title='Sales Queries'
-                icon={<HelpCircleOutline />}
-              />
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <SalesByCountries />
-        </Grid>
-        <Grid item xs={12} md={12} lg={8}>
-          <DepositWithdraw />
-        </Grid>
-        <Grid item xs={12}>
-          {/* <Table /> */}
-        </Grid>
       </Grid>
+      <>
+        {/* Bar chart */}
+        <h1 class='w-[150px] mx-auto mt-10 text-xl font-semibold capitalize '>H2V</h1>
+        <div class='w-[1100px] h-screen flex mx-auto my-auto'>
+          <div class='border border-gray-400 pt-0 rounded-xl  w-full h-fit my-auto  shadow-xl'>
+            <canvas id='myChart'></canvas>
+          </div>
+        </div>
+      </>
     </ApexChartWrapper>
   )
 }
