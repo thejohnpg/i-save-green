@@ -15,7 +15,7 @@ const CardInfo = () => {
           Total de Veículos
         </Typography>
         <Typography variant='body2' sx={{ display: 'flex', justifyContent: 'center', marginBottom: 1, alignItems: 'center', color: '#1C1C1C', fontSize: '16px'}}>
-          18
+          4
         </Typography>
       </CardContent>
     </Card>

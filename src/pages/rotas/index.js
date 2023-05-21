@@ -27,6 +27,9 @@ import Map from './maps'
 //** import cards
 import CardInfo from './../../views/cards/CardInfo'
 
+// Table Info Route
+import TableRouteInfo from '../../views/table-route-info/TableRouteInfo'
+
 const Tab = styled(MuiTab)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     minWidth: 100
@@ -75,10 +78,11 @@ const Rotas = () => {
         <TabPanel sx={{ p: 0 }} value='veiculo'>
           <Grid item xs={12}>
             <Card>
-              <CardHeader title='' titleTypographyProps={{ variant: 'h6' }} />             
+              <CardHeader title='' titleTypographyProps={{ variant: 'h6' }} />
             </Card>
             <CardInfo />
             <Map />
+            <TableRouteInfo />
           </Grid>
         </TabPanel>
       </TabContext>
