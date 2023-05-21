@@ -57,7 +57,7 @@ const Rotas = () => {
   }
 
   return (
-    <Card>
+    <Card style={{ padding: '0' }}>
       <TabContext value={value}>
         <TabList
           onChange={handleChange}
@@ -75,16 +75,11 @@ const Rotas = () => {
           />
         </TabList>
 
-        <TabPanel sx={{ p: 0 }} value='veiculo'>
-          <Grid item xs={12}>
-            <Card>
-              <CardHeader title='' titleTypographyProps={{ variant: 'h6' }} />
-            </Card>
-            <CardInfo />
-            <Map />
-            <TableRouteInfo />
-          </Grid>
-        </TabPanel>
+        <CardInfo />
+        <Map />
+        <TableRouteInfo />
+
+        <TabPanel sx={{ p: 0 }} value='veiculo'></TabPanel>
       </TabContext>
     </Card>
   )

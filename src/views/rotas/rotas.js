@@ -13,7 +13,6 @@ import { styled } from '@mui/material/styles'
 
 // ** Icons Imports
 import AccountOutline from 'mdi-material-ui/AccountOutline'
-import LockOpenOutline from 'mdi-material-ui/LockOpenOutline'
 
 const Tab = styled(MuiTab)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
@@ -35,10 +34,8 @@ const TabName = styled('span')(({ theme }) => ({
 
 const Rotas = () => {
   // ** State
-  const [value, setValue] = useState('veiculo')
-
   return (
-    <Card>
+    <Card style={{ padding: '0px' }}>
       <TabContext value=''>
         <TabList
           aria-label='rotas tabs'

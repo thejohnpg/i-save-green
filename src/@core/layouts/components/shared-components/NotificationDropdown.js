@@ -132,11 +132,11 @@ const NotificationDropdown = () => {
             <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
               <Avatar alt='Flora' src='/images/avatars/4.png' />
               <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
-                <MenuItemTitle>Congratulation Flora! 🎉</MenuItemTitle>
-                <MenuItemSubtitle variant='body2'>Won the monthly best seller badge</MenuItemSubtitle>
+                <MenuItemTitle>Parabéns !!! CHEGOU🎉</MenuItemTitle>
+                <MenuItemSubtitle variant='body2'>Seu H2V acabou de chegar. Clique aqui para saber o histórico de seu produto</MenuItemSubtitle>
               </Box>
               <Typography variant='caption' sx={{ color: 'text.disabled' }}>
-                Today
+                16:44h
               </Typography>
             </Box>
           </MenuItem>
@@ -144,11 +144,11 @@ const NotificationDropdown = () => {
             <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
               <Avatar sx={{ color: 'common.white', backgroundColor: 'primary.main' }}>VU</Avatar>
               <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
-                <MenuItemTitle>New user registered.</MenuItemTitle>
-                <MenuItemSubtitle variant='body2'>5 hours ago</MenuItemSubtitle>
+                <MenuItemTitle>H2V chegando ...</MenuItemTitle>
+                <MenuItemSubtitle variant='body2'>Acompanhe aqui seu histórico</MenuItemSubtitle>
               </Box>
               <Typography variant='caption' sx={{ color: 'text.disabled' }}>
-                Yesterday
+                13:52h
               </Typography>
             </Box>
           </MenuItem>
@@ -156,11 +156,11 @@ const NotificationDropdown = () => {
             <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
               <Avatar alt='message' src='/images/avatars/5.png' />
               <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
-                <MenuItemTitle>New message received 👋🏻</MenuItemTitle>
-                <MenuItemSubtitle variant='body2'>You have 10 unread messages</MenuItemSubtitle>
+                <MenuItemTitle>Aviso de Manutenção 👋🏻</MenuItemTitle>
+                <MenuItemSubtitle variant='body2'>Placa: ISG2K23 necessita de atenção</MenuItemSubtitle>
               </Box>
               <Typography variant='caption' sx={{ color: 'text.disabled' }}>
-                11 Aug
+                09:44h
               </Typography>
             </Box>
           </MenuItem>
@@ -168,11 +168,11 @@ const NotificationDropdown = () => {
             <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
               <img width={38} height={38} alt='paypal' src='/images/misc/paypal.png' />
               <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
-                <MenuItemTitle>Paypal</MenuItemTitle>
-                <MenuItemSubtitle variant='body2'>Received Payment</MenuItemSubtitle>
+                <MenuItemTitle>Informações sobre Upgrade de seu Plano</MenuItemTitle>
+                <MenuItemSubtitle variant='body2'>Membro Green: Agora você tem acesso a Todos os recursos</MenuItemSubtitle>
               </Box>
               <Typography variant='caption' sx={{ color: 'text.disabled' }}>
-                25 May
+                Ontem 23:52
               </Typography>
             </Box>
           </MenuItem>
@@ -180,23 +180,11 @@ const NotificationDropdown = () => {
             <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
               <Avatar alt='order' src='/images/avatars/3.png' />
               <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
-                <MenuItemTitle>Revised Order 📦</MenuItemTitle>
-                <MenuItemSubtitle variant='body2'>New order revised from john</MenuItemSubtitle>
+                <MenuItemTitle>Seu relatório está pronto 📦</MenuItemTitle>
+                <MenuItemSubtitle variant='body2'>Saiba como  está sua frota</MenuItemSubtitle>
               </Box>
               <Typography variant='caption' sx={{ color: 'text.disabled' }}>
-                19 Mar
-              </Typography>
-            </Box>
-          </MenuItem>
-          <MenuItem onClick={handleDropdownClose}>
-            <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-              <img width={38} height={38} alt='chart' src='/images/misc/chart.png' />
-              <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
-                <MenuItemTitle>Finance report has been generated</MenuItemTitle>
-                <MenuItemSubtitle variant='body2'>25 hrs ago</MenuItemSubtitle>
-              </Box>
-              <Typography variant='caption' sx={{ color: 'text.disabled' }}>
-                27 Dec
+                Ontem 19:15
               </Typography>
             </Box>
           </MenuItem>
@@ -206,7 +194,7 @@ const NotificationDropdown = () => {
           sx={{ py: 3.5, borderBottom: 0, borderTop: theme => `1px solid ${theme.palette.divider}` }}
         >
           <Button fullWidth variant='contained' onClick={handleDropdownClose}>
-            Read All Notifications
+            Ler todas as notificações
           </Button>
         </MenuItem>
       </Menu>
