@@ -103,13 +103,12 @@ const TabAccount = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth>
-              <InputLabel>Role</InputLabel>
+              <InputLabel>Usuário</InputLabel>
               <Select label='Role' defaultValue='admin'>
-                <MenuItem value='admin'>Admin</MenuItem>
-                <MenuItem value='author'>Author</MenuItem>
-                <MenuItem value='editor'>Editor</MenuItem>
-                <MenuItem value='maintainer'>Maintainer</MenuItem>
-                <MenuItem value='subscriber'>Subscriber</MenuItem>
+                <MenuItem value='admin'>Administrador</MenuItem>
+                <MenuItem value='author'>Motorista</MenuItem>
+                <MenuItem value='editor'>Fornecedor</MenuItem>
+                <MenuItem value='maintainer'>Cliente</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -117,14 +116,14 @@ const TabAccount = () => {
             <FormControl fullWidth>
               <InputLabel>Status</InputLabel>
               <Select label='Status' defaultValue='active'>
-                <MenuItem value='active'>Active</MenuItem>
-                <MenuItem value='inactive'>Inactive</MenuItem>
-                <MenuItem value='pending'>Pending</MenuItem>
+                <MenuItem value='active'>Ativo</MenuItem>
+                <MenuItem value='inactive'>Inativo</MenuItem>
+                <MenuItem value='pending'>Pendente</MenuItem>
               </Select>
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Company' placeholder='ABC Pvt. Ltd.' defaultValue='ABC Pvt. Ltd.' />
+            <TextField fullWidth label='Empresa' placeholder='GreenTeam' defaultValue='GreenTeam' />
           </Grid>
 
           {openAlert ? (
@@ -138,9 +137,9 @@ const TabAccount = () => {
                   </IconButton>
                 }
               >
-                <AlertTitle>Your email is not confirmed. Please check your inbox.</AlertTitle>
+                <AlertTitle>Seu e-mail não está confirmado. Verifique sua caixa de entrada.</AlertTitle>
                 <Link href='/' onClick={e => e.preventDefault()}>
-                  Resend Confirmation
+                  Reenviar Confirmação
                 </Link>
               </Alert>
             </Grid>
@@ -148,10 +147,10 @@ const TabAccount = () => {
 
           <Grid item xs={12}>
             <Button variant='contained' sx={{ marginRight: 3.5 }}>
-              Save Changes
+              Salvar mudanças
             </Button>
             <Button type='reset' variant='outlined' color='secondary'>
-              Reset
+              Limpar
             </Button>
           </Grid>
         </Grid>

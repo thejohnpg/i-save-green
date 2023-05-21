@@ -10,6 +10,7 @@ import AccountPlusOutline from 'mdi-material-ui/AccountPlusOutline'
 import AlertCircleOutline from 'mdi-material-ui/AlertCircleOutline'
 import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
 import MapMarkerRadius from 'mdi-material-ui/MapMarkerRadius'
+import ChartBar from 'mdi-material-ui/ChartBar'
 
 const navigation = () => {
   return [
@@ -27,6 +28,11 @@ const navigation = () => {
       title: 'Rotas',
       icon: MapMarkerRadius,
       path: '/rotas'
+    },
+    {
+      title: 'Relatórios',
+      icon: ChartBar,
+      path: '/relatorios'
     },
     {
       sectionTitle: 'Pages'

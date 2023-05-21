@@ -37,15 +37,10 @@ const Rotas = () => {
   // ** State
   const [value, setValue] = useState('veiculo')
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue)
-  }
-
   return (
     <Card>
       <TabContext value=''>
         <TabList
-          // onChange={handleChange}
           aria-label='rotas tabs'
           sx={{ borderBottom: theme => `1px solid ${theme.palette.divider}` }}
         >
