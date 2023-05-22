@@ -13,13 +13,6 @@ import { styled } from '@mui/material/styles'
 
 // ** Icons Imports
 import AccountOutline from 'mdi-material-ui/AccountOutline'
-import LockOpenOutline from 'mdi-material-ui/LockOpenOutline'
-
-// ** Table
-import Grid from '@mui/material/Grid'
-import CardHeader from '@mui/material/CardHeader'
-import TableBasicVehicle from 'src/views/tables/TableBasicVehicle'
-import TableBasicCharge from 'src/views/tables/TableBasicCharge'
 
 // ** Map
 import Map from './maps'
@@ -61,7 +54,7 @@ const Rotas = () => {
       <TabContext value={value}>
         <TabList
           onChange={handleChange}
-          aria-label='rotas tabs'
+          aria-label='Rotas tabs'
           sx={{ borderBottom: theme => `1px solid ${theme.palette.divider}` }}
         >
           <Tab

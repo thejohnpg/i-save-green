@@ -42,7 +42,7 @@ const WeeklyOverview = () => {
   return (
     <Card style={{ width: '100vh' }}>
       <CardHeader
-        title='Estabilidade do Combustível'></CardHeader>
+        title='Temperatura H2V'></CardHeader>
       <CardContent sx={{ '& .apexcharts-xcrosshairs.apexcharts-active': { opacity: 0 } }}>
           <Bar
             data={data}

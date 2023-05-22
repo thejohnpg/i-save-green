@@ -36,7 +36,7 @@ const Dashboard = () => {
         datasets: [
           {
             data: [66, 144, 146, 116, 107, 131, 43],
-            label: 'H2V (KM)',
+            label: 'H2V (KM rodados por Produto)',
             borderColor: 'rgb(109, 253, 181)',
             backgroundColor: 'rgb(109, 253, 181,0.5)',
             borderWidth: 2
